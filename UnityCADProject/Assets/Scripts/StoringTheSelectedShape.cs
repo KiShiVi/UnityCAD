@@ -31,17 +31,32 @@ public class StoringTheSelectedShape : MonoBehaviour
 
     public void fillContent(GameObject obj)
     {
-        positionX.text = Mathf.RoundToInt(obj.GetComponent<Transform>().position.x).ToString();
-        positionY.text = Mathf.RoundToInt(obj.GetComponent<Transform>().position.y).ToString();
-        positionZ.text = Mathf.RoundToInt(obj.GetComponent<Transform>().position.z).ToString();
+        List<string> info = getInfo(obj);
+        positionX.text = info[0];
+        positionY.text = info[1];
+        positionZ.text = info[2];
 
-        rotationX.text = Mathf.RoundToInt(obj.GetComponent<Transform>().rotation.eulerAngles.x).ToString();
-        rotationY.text = Mathf.RoundToInt(obj.GetComponent<Transform>().rotation.eulerAngles.y).ToString();
-        rotationZ.text = Mathf.RoundToInt(obj.GetComponent<Transform>().rotation.eulerAngles.z).ToString();
+        rotationX.text = info[3];
+        rotationY.text = info[4];
+        rotationZ.text = info[5];
 
-        scaleX.text = Mathf.RoundToInt(obj.GetComponent<Transform>().localScale.x).ToString();
-        scaleY.text = Mathf.RoundToInt(obj.GetComponent<Transform>().localScale.y).ToString();
-        scaleZ.text = Mathf.RoundToInt(obj.GetComponent<Transform>().localScale.z).ToString();
+        scaleX.text = info[6];
+        scaleY.text = info[7];
+        scaleZ.text = info[8];
     }
 
+    public List<string> getInfo(GameObject obj)
+    {
+        return new List<string> {
+            Mathf.RoundToInt(obj.GetComponent<Transform>().position.x).ToString(),
+            Mathf.RoundToInt(obj.GetComponent<Transform>().position.y).ToString(),
+            Mathf.RoundToInt(obj.GetComponent<Transform>().position.z).ToString(),
+            Mathf.RoundToInt(obj.GetComponent<Transform>().rotation.eulerAngles.x).ToString(),
+            Mathf.RoundToInt(obj.GetComponent<Transform>().rotation.eulerAngles.y).ToString(),
+            Mathf.RoundToInt(obj.GetComponent<Transform>().rotation.eulerAngles.z).ToString(),
+            Mathf.RoundToInt(obj.GetComponent<Transform>().localScale.x).ToString(),
+            Mathf.RoundToInt(obj.GetComponent<Transform>().localScale.y).ToString(),
+            Mathf.RoundToInt(obj.GetComponent<Transform>().localScale.z).ToString()
+            };
+    }
 }
