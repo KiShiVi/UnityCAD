@@ -2,8 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class createShapeScript : MonoBehaviour
+public class ButtonSenderShape : MonoBehaviour
 {
+    public GameObject shapeBuilder;
+    public GameObject shape;
+    public void onClick()
+    {
+        shapeBuilder.GetComponent<ShapeBuilder>().buildShape(shape);
+    }
     // Start is called before the first frame update
     void Start()
     {
