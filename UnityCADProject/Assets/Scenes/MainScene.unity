@@ -235,15 +235,6 @@ MonoBehaviour:
   mainScript: {fileID: 963194225}
   selectionMaterial: {fileID: 2100000, guid: 7fa68f4f2a9b0f54e8834df7feb7c881, type: 2}
   standartMaterial: {fileID: 2100000, guid: 66226565a6cde8446bfbcf71803704ba, type: 2}
-  positionX: {fileID: 184731733}
-  positionY: {fileID: 192909731}
-  positionZ: {fileID: 1061188679}
-  rotationX: {fileID: 1824750346}
-  rotationY: {fileID: 82728877}
-  rotationZ: {fileID: 967788651}
-  scaleX: {fileID: 214227953}
-  scaleY: {fileID: 849998335}
-  scaleZ: {fileID: 376660252}
 --- !u!1 &68434312
 GameObject:
   m_ObjectHideFlags: 0
@@ -3314,6 +3305,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectionShape: {fileID: 0}
   properties: {fileID: 828541528}
+  positionX: {fileID: 184731733}
+  positionY: {fileID: 192909731}
+  positionZ: {fileID: 1061188679}
+  rotationX: {fileID: 1824750346}
+  rotationY: {fileID: 82728877}
+  rotationZ: {fileID: 967788651}
+  scaleX: {fileID: 214227953}
+  scaleY: {fileID: 849998335}
+  scaleZ: {fileID: 376660252}
 --- !u!1 &967788649
 GameObject:
   m_ObjectHideFlags: 0
@@ -4146,15 +4146,6 @@ MonoBehaviour:
   mainScript: {fileID: 963194225}
   selectionMaterial: {fileID: 2100000, guid: 7fa68f4f2a9b0f54e8834df7feb7c881, type: 2}
   standartMaterial: {fileID: 2100000, guid: 66226565a6cde8446bfbcf71803704ba, type: 2}
-  positionX: {fileID: 184731733}
-  positionY: {fileID: 192909731}
-  positionZ: {fileID: 1061188679}
-  rotationX: {fileID: 1824750346}
-  rotationY: {fileID: 82728877}
-  rotationZ: {fileID: 967788651}
-  scaleX: {fileID: 214227953}
-  scaleY: {fileID: 849998335}
-  scaleZ: {fileID: 376660252}
 --- !u!1 &1290364978
 GameObject:
   m_ObjectHideFlags: 0
@@ -4412,15 +4403,6 @@ MonoBehaviour:
   mainScript: {fileID: 963194225}
   selectionMaterial: {fileID: 2100000, guid: 7fa68f4f2a9b0f54e8834df7feb7c881, type: 2}
   standartMaterial: {fileID: 2100000, guid: 66226565a6cde8446bfbcf71803704ba, type: 2}
-  positionX: {fileID: 184731733}
-  positionY: {fileID: 192909731}
-  positionZ: {fileID: 1061188679}
-  rotationX: {fileID: 1824750346}
-  rotationY: {fileID: 82728877}
-  rotationZ: {fileID: 967788651}
-  scaleX: {fileID: 214227953}
-  scaleY: {fileID: 849998335}
-  scaleZ: {fileID: 376660252}
 --- !u!1 &1412161002
 GameObject:
   m_ObjectHideFlags: 0
