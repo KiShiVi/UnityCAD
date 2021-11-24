@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class StoringTheSelectedShape : MonoBehaviour
 {
+    public Button deleteButton;
+
     public GameObject selectionShape;
     public GameObject properties;
 
@@ -27,6 +29,7 @@ public class StoringTheSelectedShape : MonoBehaviour
     private void Update()
     {
         properties.SetActive(selectionShape == null ? false : true);
+        deleteButton.interactable = selectionShape == null ? false : true;
     }
 
     public void fillContent(GameObject obj)
