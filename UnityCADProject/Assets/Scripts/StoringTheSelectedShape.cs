@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class StoringTheSelectedShape : MonoBehaviour
 {
+    public List<GameObject> Shapes;
+
     public Button deleteButton;
 
     public GameObject selectionShape;
@@ -24,6 +26,7 @@ public class StoringTheSelectedShape : MonoBehaviour
     {
         selectionShape = null;
         properties.SetActive(false);
+        Shapes = new List<GameObject>();
     }
 
     private void Update()
