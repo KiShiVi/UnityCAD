@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -54,14 +55,14 @@ public class StoringTheSelectedShape : MonoBehaviour
     public List<string> getInfo(GameObject obj)
     {
         return new List<string> {
-            obj.GetComponent<Transform>().position.x.ToString(),
-            obj.GetComponent<Transform>().position.y.ToString(),
-            obj.GetComponent<Transform>().position.z.ToString(),
-            obj.GetComponent<Transform>().rotation.eulerAngles.x.ToString(),
-            obj.GetComponent<Transform>().rotation.eulerAngles.y.ToString(),
-            obj.GetComponent<Transform>().rotation.eulerAngles.z.ToString(),
-            obj.GetComponent<Transform>().localScale.x.ToString(),
-            obj.GetComponent<Transform>().localScale.y.ToString(),
-            obj.GetComponent<Transform>().localScale.z.ToString() };
+            Math.Round(obj.GetComponent<Transform>().position.x, 2).ToString(),
+            Math.Round(obj.GetComponent<Transform>().position.y, 2).ToString(),
+            Math.Round(obj.GetComponent<Transform>().position.z, 2).ToString(),
+            Math.Round(obj.GetComponent<Transform>().localEulerAngles.x, 2).ToString(),
+            Math.Round(obj.GetComponent<Transform>().localEulerAngles.y, 2).ToString(),
+            Math.Round(obj.GetComponent<Transform>().localEulerAngles.z, 2).ToString(),
+            Math.Round(obj.GetComponent<Transform>().localScale.x, 2).ToString(),
+            Math.Round(obj.GetComponent<Transform>().localScale.y, 2).ToString(),
+            Math.Round(obj.GetComponent<Transform>().localScale.z, 2).ToString() };
     }
 }

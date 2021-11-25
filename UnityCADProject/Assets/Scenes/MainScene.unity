@@ -427,6 +427,7 @@ GameObject:
   m_Component:
   - component: {fileID: 26911573}
   - component: {fileID: 26911574}
+  - component: {fileID: 26911575}
   m_Layer: 5
   m_Name: SliderY
   m_TagString: Untagged
@@ -507,6 +508,22 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &26911575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26911572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c22ce5b630bd3af47be78be51d572adb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainScript: {fileID: 963194225}
+  choice: {fileID: 616645212}
+  sensitivity: 0.01
+  rotationSensitivity: 1
 --- !u!1 &51005809
 GameObject:
   m_ObjectHideFlags: 0
@@ -1487,16 +1504,16 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 12
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
-    m_Alignment: 3
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: Position
 --- !u!222 &275224259
@@ -2536,7 +2553,7 @@ Canvas:
   m_GameObject: {fileID: 561605575}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 963194227}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -3609,6 +3626,7 @@ GameObject:
   m_Component:
   - component: {fileID: 760856487}
   - component: {fileID: 760856488}
+  - component: {fileID: 760856489}
   m_Layer: 5
   m_Name: SliderZ
   m_TagString: Untagged
@@ -3689,6 +3707,22 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &760856489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760856486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d1accaf2561545409adb7327b02cd57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainScript: {fileID: 963194225}
+  choice: {fileID: 616645212}
+  sensitivity: 0.01
+  rotationSensitivity: 1
 --- !u!1 &802055311
 GameObject:
   m_ObjectHideFlags: 0
@@ -7323,6 +7357,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1540445883}
   - component: {fileID: 1540445884}
+  - component: {fileID: 1540445885}
   m_Layer: 5
   m_Name: SliderX
   m_TagString: Untagged
@@ -7403,6 +7438,22 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1540445885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540445882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7860c7aa6cb66fe4c898174ede297a07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainScript: {fileID: 963194225}
+  choice: {fileID: 616645212}
+  sensitivity: 0.01
+  rotationSensitivity: 1
 --- !u!1 &1544634723
 GameObject:
   m_ObjectHideFlags: 0

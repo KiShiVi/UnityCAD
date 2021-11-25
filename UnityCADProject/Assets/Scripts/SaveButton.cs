@@ -26,7 +26,7 @@ public class SaveButton : MonoBehaviour
         {
             Transform temp = obj.GetComponent<Transform>();
             writer.WriteLine(obj.name.Replace("(Clone)", "") + " " + temp.position.x + " " + temp.position.y + " " + temp.position.z + " "
-                               + temp.rotation.eulerAngles.x + " " + temp.rotation.eulerAngles.y + " " + temp.rotation.eulerAngles.z + " "
+                               + temp.localEulerAngles.x + " " + temp.localEulerAngles.y + " " + temp.localEulerAngles.z + " "
                                 + temp.localScale.x + " " + temp.localScale.y + " " + temp.localScale.z);
         }
         writer.Close();

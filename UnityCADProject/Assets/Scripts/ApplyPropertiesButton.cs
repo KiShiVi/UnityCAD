@@ -25,8 +25,8 @@ public class ApplyPropertiesButton : MonoBehaviour
             float.Parse(positionY.text == "" ? info[1] : positionY.text), 
             float.Parse(positionZ.text == "" ? info[2] : positionZ.text));
 
-        mainScript.GetComponent<StoringTheSelectedShape>().selectionShape.GetComponent<Transform>().rotation =
-            Quaternion.Euler(float.Parse(rotationX.text == "" ? info[3] : rotationX.text), 
+        mainScript.GetComponent<StoringTheSelectedShape>().selectionShape.GetComponent<Transform>().localEulerAngles =
+            new Vector3(float.Parse(rotationX.text == "" ? info[3] : rotationX.text), 
             float.Parse(rotationY.text == "" ? info[4] : rotationY.text), 
             float.Parse(rotationZ.text == "" ? info[5] : rotationZ.text));
 
