@@ -1,15 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class SelectMe : MonoBehaviour
+public class SelectMe : MonoBehaviour, IPointerClickHandler
 {
     public GameObject mainScript;
     public Material selectionMaterial;
     public Material standartMaterial;
 
-    public void OnMouseUp()
+    public void OnPointerClick(PointerEventData eventData)
     {
+        Debug.Log("Ckick");
         choiseSelectionShape(this.gameObject);
     }
 
