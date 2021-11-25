@@ -26,7 +26,7 @@ public class StoringTheSelectedShape : MonoBehaviour
     {
         selectionShape = null;
         properties.SetActive(false);
-        Shapes = new List<GameObject>();
+        //Shapes = new List<GameObject>();
     }
 
     private void Update()
