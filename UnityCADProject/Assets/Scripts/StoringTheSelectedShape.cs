@@ -62,7 +62,6 @@ public class StoringTheSelectedShape : MonoBehaviour
             obj.GetComponent<Transform>().rotation.eulerAngles.z.ToString(),
             obj.GetComponent<Transform>().localScale.x.ToString(),
             obj.GetComponent<Transform>().localScale.y.ToString(),
-            obj.GetComponent<Transform>().localScale.z.ToString()
-            };
+            obj.GetComponent<Transform>().localScale.z.ToString() };
     }
 }
