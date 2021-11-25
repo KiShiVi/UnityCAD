@@ -54,15 +54,15 @@ public class StoringTheSelectedShape : MonoBehaviour
     public List<string> getInfo(GameObject obj)
     {
         return new List<string> {
-            Mathf.RoundToInt(obj.GetComponent<Transform>().position.x).ToString(),
-            Mathf.RoundToInt(obj.GetComponent<Transform>().position.y).ToString(),
-            Mathf.RoundToInt(obj.GetComponent<Transform>().position.z).ToString(),
-            Mathf.RoundToInt(obj.GetComponent<Transform>().rotation.eulerAngles.x).ToString(),
-            Mathf.RoundToInt(obj.GetComponent<Transform>().rotation.eulerAngles.y).ToString(),
-            Mathf.RoundToInt(obj.GetComponent<Transform>().rotation.eulerAngles.z).ToString(),
-            Mathf.RoundToInt(obj.GetComponent<Transform>().localScale.x).ToString(),
-            Mathf.RoundToInt(obj.GetComponent<Transform>().localScale.y).ToString(),
-            Mathf.RoundToInt(obj.GetComponent<Transform>().localScale.z).ToString()
+            obj.GetComponent<Transform>().position.x.ToString(),
+            obj.GetComponent<Transform>().position.y.ToString(),
+            obj.GetComponent<Transform>().position.z.ToString(),
+            obj.GetComponent<Transform>().rotation.eulerAngles.x.ToString(),
+            obj.GetComponent<Transform>().rotation.eulerAngles.y.ToString(),
+            obj.GetComponent<Transform>().rotation.eulerAngles.z.ToString(),
+            obj.GetComponent<Transform>().localScale.x.ToString(),
+            obj.GetComponent<Transform>().localScale.y.ToString(),
+            obj.GetComponent<Transform>().localScale.z.ToString()
             };
     }
 }

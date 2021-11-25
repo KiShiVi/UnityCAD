@@ -36,22 +36,22 @@ public class LoadButton : MonoBehaviour
             switch (shapeParameters[0])
             {
                 case "Sphere":
-                    mainScript.GetComponent<ShapeBuilder>().buildShape(sphere, new List<int>(){
-                        int.Parse(shapeParameters[1]), int.Parse(shapeParameters[2]), int.Parse(shapeParameters[3]),
-                        int.Parse(shapeParameters[4]), int.Parse(shapeParameters[5]), int.Parse(shapeParameters[6]),
-                        int.Parse(shapeParameters[7]), int.Parse(shapeParameters[8]), int.Parse(shapeParameters[9]) });
+                    mainScript.GetComponent<ShapeBuilder>().buildShape(sphere, new List<float>(){
+                        float.Parse(shapeParameters[1]), float.Parse(shapeParameters[2]), float.Parse(shapeParameters[3]),
+                        float.Parse(shapeParameters[4]), float.Parse(shapeParameters[5]), float.Parse(shapeParameters[6]),
+                        float.Parse(shapeParameters[7]), float.Parse(shapeParameters[8]), float.Parse(shapeParameters[9]) });
                     break;
                 case "Cube":
-                    mainScript.GetComponent<ShapeBuilder>().buildShape(cube, new List<int>(){
-                        int.Parse(shapeParameters[1]), int.Parse(shapeParameters[2]), int.Parse(shapeParameters[3]),
-                        int.Parse(shapeParameters[4]), int.Parse(shapeParameters[5]), int.Parse(shapeParameters[6]),
-                        int.Parse(shapeParameters[7]), int.Parse(shapeParameters[8]), int.Parse(shapeParameters[9]) });
+                    mainScript.GetComponent<ShapeBuilder>().buildShape(cube, new List<float>(){
+                        float.Parse(shapeParameters[1]), float.Parse(shapeParameters[2]), float.Parse(shapeParameters[3]),
+                        float.Parse(shapeParameters[4]), float.Parse(shapeParameters[5]), float.Parse(shapeParameters[6]),
+                        float.Parse(shapeParameters[7]), float.Parse(shapeParameters[8]), float.Parse(shapeParameters[9]) });
                     break;
                 case "Cylinder":
-                    mainScript.GetComponent<ShapeBuilder>().buildShape(cylinder, new List<int>(){
-                        int.Parse(shapeParameters[1]), int.Parse(shapeParameters[2]), int.Parse(shapeParameters[3]),
-                        int.Parse(shapeParameters[4]), int.Parse(shapeParameters[5]), int.Parse(shapeParameters[6]),
-                        int.Parse(shapeParameters[7]), int.Parse(shapeParameters[8]), int.Parse(shapeParameters[9]) });
+                    mainScript.GetComponent<ShapeBuilder>().buildShape(cylinder, new List<float>(){
+                        float.Parse(shapeParameters[1]), float.Parse(shapeParameters[2]), float.Parse(shapeParameters[3]),
+                        float.Parse(shapeParameters[4]), float.Parse(shapeParameters[5]), float.Parse(shapeParameters[6]),
+                        float.Parse(shapeParameters[7]), float.Parse(shapeParameters[8]), float.Parse(shapeParameters[9]) });
                     break;
             }
         }
