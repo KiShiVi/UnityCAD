@@ -8,6 +8,7 @@ public class SelectMe : MonoBehaviour, IPointerClickHandler
     public GameObject mainScript;
     public Material selectionMaterial;
     public Material standartMaterial;
+    public Material redMaterial;
 
     public void OnPointerClick(PointerEventData eventData)
     {

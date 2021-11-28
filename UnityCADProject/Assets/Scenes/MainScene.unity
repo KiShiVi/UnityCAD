@@ -271,6 +271,7 @@ MonoBehaviour:
   mainScript: {fileID: 963194225}
   selectionMaterial: {fileID: 2100000, guid: 7fa68f4f2a9b0f54e8834df7feb7c881, type: 2}
   standartMaterial: {fileID: 2100000, guid: 66226565a6cde8446bfbcf71803704ba, type: 2}
+  redMaterial: {fileID: 2100000, guid: fdf3826eb567d2f46b70459d4aca413b, type: 2}
 --- !u!1 &16701480
 GameObject:
   m_ObjectHideFlags: 0
@@ -4799,6 +4800,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Shapes: []
   deleteButton: {fileID: 1994691583}
+  selectionMaterial: {fileID: 2100000, guid: 7fa68f4f2a9b0f54e8834df7feb7c881, type: 2}
+  standartMaterial: {fileID: 2100000, guid: 66226565a6cde8446bfbcf71803704ba, type: 2}
+  redMaterial: {fileID: 2100000, guid: fdf3826eb567d2f46b70459d4aca413b, type: 2}
   selectionShape: {fileID: 0}
   properties: {fileID: 828541528}
   positionX: {fileID: 184731733}
@@ -5959,6 +5963,7 @@ MonoBehaviour:
   mainScript: {fileID: 963194225}
   selectionMaterial: {fileID: 2100000, guid: 7fa68f4f2a9b0f54e8834df7feb7c881, type: 2}
   standartMaterial: {fileID: 2100000, guid: 66226565a6cde8446bfbcf71803704ba, type: 2}
+  redMaterial: {fileID: 2100000, guid: fdf3826eb567d2f46b70459d4aca413b, type: 2}
 --- !u!1 &1282755381
 GameObject:
   m_ObjectHideFlags: 0
@@ -6443,6 +6448,7 @@ MonoBehaviour:
   mainScript: {fileID: 963194225}
   selectionMaterial: {fileID: 2100000, guid: 7fa68f4f2a9b0f54e8834df7feb7c881, type: 2}
   standartMaterial: {fileID: 2100000, guid: 66226565a6cde8446bfbcf71803704ba, type: 2}
+  redMaterial: {fileID: 2100000, guid: fdf3826eb567d2f46b70459d4aca413b, type: 2}
 --- !u!64 &1339220421
 MeshCollider:
   m_ObjectHideFlags: 0
