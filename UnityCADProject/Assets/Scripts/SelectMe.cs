@@ -10,23 +10,35 @@ public class SelectMe : MonoBehaviour, IPointerClickHandler
     public Material selectionMaterial;
     public Material standartMaterial;
     public Material redMaterial;
+    public Material lightMaterial;
+    public Material selectionLightMaterial;
 
     [NonSerialized]
     public List<GameObject> crossingShapes;
 
+    [NonSerialized]
+    public List<GameObject> crossingLights;
+
     void Start()
     {
         crossingShapes = new List<GameObject>();
+        crossingLights = new List<GameObject>();
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        crossingShapes.Add(other.gameObject);
+        if (other.gameObject.name.Replace("(Clone)", "") != "Light")
+            crossingShapes.Add(other.gameObject);
+        else
+            crossingLights.Add(other.gameObject);
     }
 
     private void OnTriggerExit(Collider other)
     {
-        crossingShapes.Remove(other.gameObject);
+        if (other.gameObject.name.Replace("(Clone)", "") != "Light")
+            crossingShapes.Remove(other.gameObject);
+        else
+            crossingLights.Remove(other.gameObject);
     }
 
     public void OnPointerClick(PointerEventData eventData)
@@ -40,10 +52,17 @@ public class SelectMe : MonoBehaviour, IPointerClickHandler
         if (mainScript.GetComponent<StoringTheSelectedShape>().selectionShape == obj.gameObject)
             return;
 
-        obj.GetComponent<MeshRenderer>().material = selectionMaterial;
+        if (obj.name.Replace("(Clone)", "") == "Light")
+            obj.transform.Find("Sphere").GetComponent<MeshRenderer>().material = selectionLightMaterial;
+        else
+            obj.GetComponent<MeshRenderer>().material = selectionMaterial;
+
         if (mainScript.GetComponent<StoringTheSelectedShape>().selectionShape != null)
         {
-            mainScript.GetComponent<StoringTheSelectedShape>().selectionShape.GetComponent<MeshRenderer>().material = standartMaterial;
+            if (mainScript.GetComponent<StoringTheSelectedShape>().selectionShape.name.Replace("(Clone)", "") == "Light")
+                mainScript.GetComponent<StoringTheSelectedShape>().selectionShape.transform.Find("Sphere").GetComponent<MeshRenderer>().material = lightMaterial;
+            else
+                mainScript.GetComponent<StoringTheSelectedShape>().selectionShape.GetComponent<MeshRenderer>().material = standartMaterial;
         }
         mainScript.GetComponent<StoringTheSelectedShape>().selectionShape = obj.gameObject;
 

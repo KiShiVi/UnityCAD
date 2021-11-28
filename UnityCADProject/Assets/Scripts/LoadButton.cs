@@ -10,6 +10,7 @@ public class LoadButton : MonoBehaviour
     public GameObject sphere;
     public GameObject cube;
     public GameObject cylinder;
+    public GameObject light;
     public GameObject mainScript;
     public InputField projectName;
 
@@ -28,7 +29,14 @@ public class LoadButton : MonoBehaviour
             Destroy(obj);
         }
 
+        foreach (GameObject obj in mainScript.GetComponent<StoringTheSelectedShape>().Lights)
+        {
+            Destroy(obj);
+        }
+
         mainScript.GetComponent<StoringTheSelectedShape>().Shapes = new List<GameObject>();
+        mainScript.GetComponent<StoringTheSelectedShape>().Lights = new List<GameObject>();
+
         mainScript.GetComponent<StoringTheSelectedShape>().selectionShape = null;
 
         List<string> infoShape = reader.ReadToEnd().Split('\n').ToList();
@@ -52,6 +60,12 @@ public class LoadButton : MonoBehaviour
                     break;
                 case "Cylinder":
                     mainScript.GetComponent<ShapeBuilder>().buildShape(cylinder, new List<float>(){
+                        float.Parse(shapeParameters[1]), float.Parse(shapeParameters[2]), float.Parse(shapeParameters[3]),
+                        float.Parse(shapeParameters[4]), float.Parse(shapeParameters[5]), float.Parse(shapeParameters[6]),
+                        float.Parse(shapeParameters[7]), float.Parse(shapeParameters[8]), float.Parse(shapeParameters[9]) });
+                    break;
+                case "Light":
+                    mainScript.GetComponent<ShapeBuilder>().buildShape(light, new List<float>(){
                         float.Parse(shapeParameters[1]), float.Parse(shapeParameters[2]), float.Parse(shapeParameters[3]),
                         float.Parse(shapeParameters[4]), float.Parse(shapeParameters[5]), float.Parse(shapeParameters[6]),
                         float.Parse(shapeParameters[7]), float.Parse(shapeParameters[8]), float.Parse(shapeParameters[9]) });

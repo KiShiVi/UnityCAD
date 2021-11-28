@@ -16,7 +16,11 @@ public class ShapeBuilder : MonoBehaviour
             newObj.GetComponent<Transform>().localScale = new Vector3(coords[6], coords[7], coords[8]);
         }
 
-        mainScript.GetComponent<StoringTheSelectedShape>().Shapes.Add(newObj);
+        if (shape.name.Replace("(Clone)", "") == "Light")
+            mainScript.GetComponent<StoringTheSelectedShape>().Lights.Add(newObj);
+        else
+            mainScript.GetComponent<StoringTheSelectedShape>().Shapes.Add(newObj);
+
         newObj.SetActive(true);
         friendlyOnClick.GetComponent<SelectMe>().choiseSelectionShape(newObj);
     }

@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class StoringTheSelectedShape : MonoBehaviour
 {
     public List<GameObject> Shapes;
+    public List<GameObject> Lights;
 
     public Button deleteButton;
 
