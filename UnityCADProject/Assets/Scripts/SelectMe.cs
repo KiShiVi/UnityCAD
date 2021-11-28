@@ -11,8 +11,8 @@ public class SelectMe : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        Debug.Log("Ckick");
-        choiseSelectionShape(this.gameObject);
+        if (eventData.button == PointerEventData.InputButton.Left)
+            choiseSelectionShape(this.gameObject);
     }
 
     public void choiseSelectionShape(GameObject obj)
