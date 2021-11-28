@@ -16,7 +16,10 @@ public class LoadButton : MonoBehaviour
     public void loadFile()
     {
         if (!File.Exists(Directory.GetCurrentDirectory() + "\\Saves\\" + projectName.text + ".txt"))
+        {
+            mainScript.GetComponent<StoringTheSelectedShape>().toLogText("The file does not exist");
             return;
+        }
 
         StreamReader reader = new StreamReader(Directory.GetCurrentDirectory() + "\\Saves\\" + projectName.text + ".txt");
 
@@ -55,7 +58,7 @@ public class LoadButton : MonoBehaviour
                     break;
             }
         }
-
+        mainScript.GetComponent<StoringTheSelectedShape>().toLogText("File downloaded");
         reader.Close();
     }
 }

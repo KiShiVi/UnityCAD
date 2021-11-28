@@ -26,6 +26,7 @@ public class StoringTheSelectedShape : MonoBehaviour
     public Text scaleX;
     public Text scaleY;
     public Text scaleZ;
+    public Text logText;
 
     void Start()
     {
@@ -79,5 +80,10 @@ public class StoringTheSelectedShape : MonoBehaviour
             Math.Round(obj.GetComponent<Transform>().localScale.x, 2).ToString(),
             Math.Round(obj.GetComponent<Transform>().localScale.y, 2).ToString(),
             Math.Round(obj.GetComponent<Transform>().localScale.z, 2).ToString() };
+    }
+
+    public void toLogText(string text)
+    {
+        logText.text = text;
     }
 }

@@ -9,9 +9,23 @@ public class SaveButton : MonoBehaviour
 {
     public InputField projectName;
     public GameObject mainScript;
+    public Toggle toggle;
 
     public void saveFile()
     {
+        if (toggle.isOn)
+            foreach (GameObject gameObject1 in mainScript.GetComponent<StoringTheSelectedShape>().Shapes)
+                foreach (GameObject gameObject2 in mainScript.GetComponent<StoringTheSelectedShape>().Shapes)
+                {
+                    if (gameObject1 == gameObject2)
+                        continue;
+                    if (gameObject1.GetComponent<Collider>().bounds.Intersects(gameObject2.GetComponent<Collider>().bounds))
+                    {
+                        mainScript.GetComponent<StoringTheSelectedShape>().toLogText("File NOT saved");
+                        return;
+                    }
+                }
+
         DateTime thisDay = DateTime.UtcNow;
         //Debug.Log(Directory.GetCurrentDirectory() + "\\Saves\\" + projectName.text + "_" + thisDay.ToString().Replace(':', '_') + ".txt");
 
@@ -29,6 +43,7 @@ public class SaveButton : MonoBehaviour
                                + temp.localEulerAngles.x + " " + temp.localEulerAngles.y + " " + temp.localEulerAngles.z + " "
                                 + temp.localScale.x + " " + temp.localScale.y + " " + temp.localScale.z);
         }
+        mainScript.GetComponent<StoringTheSelectedShape>().toLogText("File saved");
         writer.Close();
     }
 }
