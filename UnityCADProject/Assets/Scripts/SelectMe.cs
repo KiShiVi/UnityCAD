@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,24 @@ public class SelectMe : MonoBehaviour, IPointerClickHandler
     public Material selectionMaterial;
     public Material standartMaterial;
     public Material redMaterial;
+
+    [NonSerialized]
+    public List<GameObject> crossingShapes;
+
+    void Start()
+    {
+        crossingShapes = new List<GameObject>();
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        crossingShapes.Add(other.gameObject);
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        crossingShapes.Remove(other.gameObject);
+    }
 
     public void OnPointerClick(PointerEventData eventData)
     {

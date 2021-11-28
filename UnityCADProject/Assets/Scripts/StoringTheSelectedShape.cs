@@ -40,16 +40,16 @@ public class StoringTheSelectedShape : MonoBehaviour
         properties.SetActive(selectionShape == null ? false : true);
         deleteButton.interactable = selectionShape == null ? false : true;
 
-        foreach (GameObject gameObject in Shapes)
-        {
-            if (gameObject == selectionShape)
-                continue;
-            if (selectionShape.GetComponent<Collider>().bounds.Intersects(gameObject.GetComponent<Collider>().bounds))
-                gameObject.GetComponent<MeshRenderer>().material = redMaterial;
-            else
-                gameObject.GetComponent<MeshRenderer>().material = standartMaterial;
-        }
-
+        if (selectionShape != null)
+            foreach (GameObject gameObject in Shapes)
+            {
+                if (gameObject == selectionShape || selectionShape.GetComponent<SelectMe>().crossingShapes == null)
+                    continue;
+                if (selectionShape.GetComponent<SelectMe>().crossingShapes.Contains(gameObject))
+                    gameObject.GetComponent<MeshRenderer>().material = redMaterial;
+                else
+                    gameObject.GetComponent<MeshRenderer>().material = standartMaterial;
+            }
     }
 
     public void fillContent(GameObject obj)
