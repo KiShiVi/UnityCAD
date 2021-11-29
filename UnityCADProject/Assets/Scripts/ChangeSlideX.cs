@@ -20,16 +20,16 @@ public class ChangeSlideX : MonoBehaviour
             switch (choice.value)
             {
                 case 0:
-                    go.GetComponent<Transform>().position += new Vector3(this.GetComponent<Slider>().value * sensitivity, 0f, 0f);
+                    go.GetComponent<Transform>().position += new Vector3(this.GetComponent<Slider>().value * sensitivity * Time.deltaTime, 0f, 0f);
                     mainScript.GetComponent<StoringTheSelectedShape>().fillContent(go);
                     break;
                 case 1:
-                    go.GetComponent<Transform>().Rotate(this.GetComponent<Slider>().value * rotationSensitivity, 0f, 0f);
+                    go.GetComponent<Transform>().Rotate(this.GetComponent<Slider>().value * rotationSensitivity * Time.deltaTime, 0f, 0f);
                     //go.GetComponent<Transform>().localEulerAngles += new Vector3(this.GetComponent<Slider>().value * rotationSensitivity, 0f, 0f);
                     mainScript.GetComponent<StoringTheSelectedShape>().fillContent(go);
                     break;
                 case 2:
-                    go.GetComponent<Transform>().localScale += new Vector3(this.GetComponent<Slider>().value * sensitivity, 0f, 0f);
+                    go.GetComponent<Transform>().localScale += new Vector3(this.GetComponent<Slider>().value * sensitivity * Time.deltaTime, 0f, 0f);
                     mainScript.GetComponent<StoringTheSelectedShape>().fillContent(go);
                     break;
             }
