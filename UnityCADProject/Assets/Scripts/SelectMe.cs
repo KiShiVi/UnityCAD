@@ -12,6 +12,7 @@ public class SelectMe : MonoBehaviour, IPointerClickHandler
     public Material redMaterial;
     public Material lightMaterial;
     public Material selectionLightMaterial;
+    public GameObject objPoint;
 
     [NonSerialized]
     public List<GameObject> crossingShapes;
@@ -19,13 +20,18 @@ public class SelectMe : MonoBehaviour, IPointerClickHandler
     [NonSerialized]
     public List<GameObject> crossingLights;
 
+    GameObject[] points;
+    ContactPoint[] contacts;
+
     void Start()
     {
         crossingShapes = new List<GameObject>();
         crossingLights = new List<GameObject>();
+        points = new GameObject[1024];
+        contacts = new ContactPoint[1024];
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.name.Replace("(Clone)", "") != "Light")
             crossingShapes.Add(other.gameObject);
@@ -33,7 +39,7 @@ public class SelectMe : MonoBehaviour, IPointerClickHandler
             crossingLights.Add(other.gameObject);
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnCollisionExit(Collision other)
     {
         if (other.gameObject.name.Replace("(Clone)", "") != "Light")
             crossingShapes.Remove(other.gameObject);
